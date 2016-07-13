@@ -30,9 +30,12 @@ version = '1.0.0'
 
 uploadArchives {
     repositories {
+//        mavenLocal()
         mavenDeployer {
-            repository (url: uri("${gradle.gradleUserHomeDir}/localRepository/android"))
-            setUniqueVersion true
+            repository(url: project.repositories.mavenLocal().url)
         }
+//        mavenDeployer {
+//            repository(url: uri('../test'))
+//        }
     }
 }
