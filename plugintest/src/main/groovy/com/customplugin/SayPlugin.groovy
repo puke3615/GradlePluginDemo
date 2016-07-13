@@ -21,5 +21,6 @@ class SayPlugin implements Plugin<Project> {
         project.extensions.create("args", CustomExtension)
         project.args.extensions.create("second", SecondExtension)
         project.task('aaa_extra', type : ExtraTask)
+        project.task('aaa_client', type : ClientTask)
     }
 }
